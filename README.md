@@ -4,3 +4,4 @@ This is my implementation of the Calculator Demo Assignment 1 from Stanford's co
 I only did the Clear, Decimal, and History buttons because of certain time restraints. 
 I hope this is a good example for any classmates that are stumped on this part of the course. 
 Please feel free to fork and edit! 
+Also for some weird reason my times operator isn't working. It would be great if someone could find out why. 
