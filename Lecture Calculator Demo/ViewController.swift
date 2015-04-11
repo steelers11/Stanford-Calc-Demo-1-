@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
     
+    var brain = CalculatorBrain()
+    
     var isInMiddleOfTypingANumber = false
     
     var needsDecimal = true
@@ -62,45 +64,36 @@ class ViewController: UIViewController {
     
     
     @IBAction func operation(sender: UIButton) {
-        let operation = sender.currentTitle!
-        addHistoryElement(operation)
+        if let operation = sender.currentTitle {
+        }
+        
+        // Next line under construction: 
+        //addHistoryElement("\(operation)")
         
         needsDecimal = false
         if isInMiddleOfTypingANumber {
             enter()
         }
-        
-        func performOperation(operation: (Double, Double) -> Double) {
-            if operandStack.count >= 2 {
-                needsDecimal = false
-                displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
-                enter()
+        if let operation = sender.currentTitle {
+            if let result: Double = brain.performOperation(operation) {
+                displayValue = result
+            } else {
+                displayValue = 0
             }
         }
-        
-         func performsOperation(operation: Double -> Double) {
-            if operandStack.count >= 1 {
-                needsDecimal = false
-                displayValue = operation(operandStack.removeLast())
-                enter()
-            }
-        }
-
-        switch operation {
-            case "x": performOperation{$1 * $0}
-            case "÷": performOperation{$1 / $0}
-            case "+": performOperation{$0 + $1}
-            case "−": performOperation{$1 - $0}
-            case "√": performsOperation{sqrt($0)}
-            default: break
-        }
-           }
+    }
+    
     // contains all number operators
     var operandStack = Array<Double>()
     
     @IBAction func enter() {
         isInMiddleOfTypingANumber = false
         operandStack.append(displayValue)
+        if let result = brain.pushOperand(displayValue) {
+            displayValue = result
+        } else {
+            displayValue = 0
+        }
         
         addHistoryElement("⏎")
         // Debugging purposes

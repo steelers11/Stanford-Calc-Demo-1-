@@ -13,6 +13,7 @@
 		4C91EC5F1ACF640A00074654 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C91EC5E1ACF640A00074654 /* Images.xcassets */; };
 		4C91EC621ACF640A00074654 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C91EC601ACF640A00074654 /* LaunchScreen.xib */; };
 		4C91EC6E1ACF640A00074654 /* Lecture_Calculator_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91EC6D1ACF640A00074654 /* Lecture_Calculator_DemoTests.swift */; };
+		4CE1CEB71AD89D4800EBB08C /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1CEB61AD89D4800EBB08C /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		4C91EC671ACF640A00074654 /* Lecture Calculator DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lecture Calculator DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C91EC6C1ACF640A00074654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C91EC6D1ACF640A00074654 /* Lecture_Calculator_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture_Calculator_DemoTests.swift; sourceTree = "<group>"; };
+		4CE1CEB61AD89D4800EBB08C /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4C91EC591ACF640A00074654 /* ViewController.swift */,
+				4CE1CEB61AD89D4800EBB08C /* CalculatorBrain.swift */,
 				4C91EC5B1ACF640A00074654 /* Main.storyboard */,
 				4C91EC551ACF640A00074654 /* Supporting Files */,
 			);
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE1CEB71AD89D4800EBB08C /* CalculatorBrain.swift in Sources */,
 				4C91EC5A1ACF640A00074654 /* ViewController.swift in Sources */,
 				4C91EC581ACF640A00074654 /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +411,7 @@
 				4C91EC731ACF640A00074654 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C91EC741ACF640A00074654 /* Build configuration list for PBXNativeTarget "Lecture Calculator DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				4C91EC761ACF640A00074654 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
